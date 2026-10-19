@@ -193,6 +193,7 @@
       <li><a href="#sites">Sites</a></li>
       <li><a href="#controls">Remote &amp; pads</a></li>
       <li><a href="#play">Full screen</a></li>
+      <li><a href="#player">Built-in player</a></li>
       <li><a href="#ads">Ad blocking</a></li>
       <li><a href="#apps">Site apps</a></li>
       <li><a href="#scripts">Userscripts</a></li>
@@ -245,6 +246,7 @@
       <div class="card">
         <h3>Controllers</h3>
         <ul class="list">
+          <li><b>Auto mode</b> (the default): the pad acts as a gamepad while a game reads gamepads, and as keys for "press any key" screens, decided press by press.</li>
           <li><b>Gamepad API in every frame.</b> Your pad appears as a standard gamepad to the page and to emulators inside iframes, even on TVs whose WebView doesn't support gamepads.</li>
           <li><b>Keyboard mode</b> for games that only read the keyboard: each button sends a key you choose (arrows, Z/X/A/S, Enter, Shift, F-keys…).</li>
           <li><b>Both at once</b>, chosen per site and remembered.</li>
@@ -261,6 +263,31 @@
       <div class="card"><h3>Windowed</h3><p class="muted">A slim toolbar stays on top with back, reload, home, the address, blocked-ad count and input mode. The pointer can click it.</p></div>
       <div class="card"><h3>Full screen</h3><p class="muted">The page gets the whole TV. Sites' own full-screen buttons work too, and Back leaves them.</p></div>
       <div class="card"><h3>Focus game</h3><p class="muted">One button finds the game (canvas, emulator frame, Flash/Ruffle player) and blows it up to fill the screen at the right aspect ratio, hiding everything else.</p></div>
+    </div>
+  </section>
+
+  <section id="player">
+    <h2>Built-in game player <span class="tag">NEW IN 1.1</span></h2>
+    <p class="intro">Many game sites run their games in EmulatorJS, and their pages often stall waiting on ads. When a site starts an EmulatorJS game, RetroTV takes the game and plays it in its own full-screen player instead. The site stays your catalogue; the game runs clean.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Playing</h3>
+        <ul class="list">
+          <li>Full screen from the first frame, with your controller as player 1, or the remote when no controller is connected.</li>
+          <li>Game files download once and are kept on the TV, so replays start fast.</li>
+          <li>If a game won't start, RetroTV retries with compatibility cores, then offers <b>Play on the site instead</b>.</li>
+          <li>Turn the player off per site to always use the site's own emulator.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Game menu</h3>
+        <p class="muted">Press <kbd>Back</kbd>, <kbd>Menu</kbd> or <kbd>Select</kbd> + <kbd>Start</kbd>:</p>
+        <ul class="list">
+          <li>Save and load in 4 slots, restart, fast-forward, mute.</li>
+          <li>The full EmulatorJS menu, driven with the pointer.</li>
+          <li>A <b>Recent games</b> row on the home screen, and <b>Play a ROM file</b> for games you've downloaded.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -337,7 +364,7 @@
 
   <section id="downloads">
     <h2>Emulators &amp; downloads <span class="tag">NO PLAY STORE</span></h2>
-    <p class="intro">If you'd rather run a native emulator too, RetroTV fetches the newest official build and installs it, with no Play Store needed. Downloads land in Downloads/RetroTV. APKs install with one press, and ROMs open in the emulator you choose.</p>
+    <p class="intro">If you'd rather run a native emulator too, RetroTV fetches the newest official build and installs it, with no Play Store needed. Downloads land in Downloads/RetroTV. APKs install with one press, and ROMs play in the built-in player or open in the emulator you choose.</p>
     <div class="emus">
       <div class="emu"><b>RetroArch</b><small>Almost everything, NES to PS1, arcade, DOS</small></div>
       <div class="emu"><b>Lemuroid</b><small>NES, SNES, GB/GBA, Genesis, N64, PSX, PSP, DS</small></div>
@@ -420,6 +447,7 @@
     <h2>What's new</h2>
     <div class="card">
       <ul class="list">
+        <li><b>v1.1</b>: built-in game player for EmulatorJS sites (full screen, save slots, fast-forward, cached game files, Recent games, Play a ROM file). Games that hung waiting on blocked ads now start: ad and analytics scripts get harmless stand-ins. Auto controller mode. Desktop and TV views now look different (1280 px vs 640 px wide). Button labels no longer get cut off. More video-ad hosts blocked.</li>
         <li><b>v1.0</b>: first release. 16 game sites, remote pointer and D-pad mode, Gamepad API and keyboard controller modes, Focus game, ad, pop-up and redirect blocking, desktop/mobile view per site, installable site apps with sandboxed sign-ins, userscripts with Greasy Fork search, emulator downloads, themes, backup and restore.</li>
       </ul>
     </div>
