@@ -194,6 +194,8 @@
       <li><a href="#controls">Remote &amp; pads</a></li>
       <li><a href="#play">Full screen</a></li>
       <li><a href="#player">Built-in player</a></li>
+      <li><a href="#library">My games</a></li>
+      <li><a href="#phone">Phone link</a></li>
       <li><a href="#ads">Ad blocking</a></li>
       <li><a href="#apps">Site apps</a></li>
       <li><a href="#scripts">Userscripts</a></li>
@@ -277,16 +279,63 @@
           <li>Game files download once and are kept on the TV, so replays start fast.</li>
           <li>If a game won't start, RetroTV retries with compatibility cores, then offers <b>Play on the site instead</b>.</li>
           <li>Turn the player off per site to always use the site's own emulator.</li>
+          <li><b>Play without internet</b>: download the emulator cores once and play cached games offline.</li>
+          <li>Up to <b>4 players</b>: controllers and phones, each assigned a player in the Players panel.</li>
         </ul>
       </div>
       <div class="card">
         <h3>Game menu</h3>
         <p class="muted">Press <kbd>Back</kbd>, <kbd>Menu</kbd> or <kbd>Select</kbd> + <kbd>Start</kbd>:</p>
         <ul class="list">
-          <li>Save and load in 4 slots, restart, fast-forward, mute.</li>
-          <li>The full EmulatorJS menu, driven with the pointer.</li>
-          <li>A <b>Recent games</b> row on the home screen, and <b>Play a ROM file</b> for games you've downloaded.</li>
+          <li>Save and load in 4 slots, each with a screenshot. Saves are kept as files on the TV and go into backups.</li>
+          <li><b>Rewind</b>, fast-forward, restart, mute.</li>
+          <li><b>CRT and LCD filters</b> and sharp pixels, remembered per game.</li>
+          <li><b>Cheats</b>: type Game Genie / Action Replay codes, switch them on and off.</li>
+          <li>Pad hotkeys: <kbd>Select</kbd> + <kbd>L1</kbd>/<kbd>R1</kbd> save and load, <kbd>L2</kbd> rewind, <kbd>R2</kbd> fast-forward.</li>
+          <li>The full EmulatorJS menu and button layout, driven with the pointer.</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="library">
+    <h2>My games <span class="tag">NEW IN 1.2</span></h2>
+    <p class="intro">Every game you play in the built-in player lands in your library, with box art and screenshots from the libretro thumbnail collection.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Library</h3>
+        <ul class="list">
+          <li>Box art for each game, sorted by recent, most played, name or console.</li>
+          <li>Favourites, play time and play count.</li>
+          <li><b>Play a ROM file</b> for games you've downloaded.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Find games</h3>
+        <ul class="list">
+          <li><b>Search every site at once</b> from the home screen.</li>
+          <li>Site cards show which consoles each site has and whether it's up right now.</li>
+          <li>When the TV sits idle, an <b>attract mode</b> slideshow of your games plays, like an arcade cabinet.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="phone">
+    <h2>Phone link <span class="tag">NEW IN 1.2</span></h2>
+    <p class="intro">Scan a QR code on the TV with any phone on the same Wi-Fi. No app to install: it opens in the phone's browser.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Phone as controller</h3>
+        <p class="muted">A touch gamepad with D-pad, face and shoulder buttons. Up to four phones join as extra players, in the player and on game sites.</p>
+      </div>
+      <div class="card">
+        <h3>Send games</h3>
+        <p class="muted">Pick a ROM on the phone and it's on the TV, ready to play.</p>
+      </div>
+      <div class="card">
+        <h3>Saves &amp; backups</h3>
+        <p class="muted">Download a full backup (settings and saves) to the phone, or restore one. Two RetroTVs in the house can <b>sync saves</b> with each other.</p>
       </div>
     </div>
   </section>
@@ -447,6 +496,7 @@
     <h2>What's new</h2>
     <div class="card">
       <ul class="list">
+        <li><b>v1.2</b>: saves kept as files with screenshots, in zip backups. My games library with box art, play time and favourites. Search every site at once; site cards show consoles and whether a site is up. Player: rewind, CRT/LCD filters, sharp pixels, cheats, pad hotkeys, up to 4 players, play without internet. Phone link: phone as controller, send ROMs, backups to the phone, save sync between two TVs. Attract mode, a first-run setup, larger text and bold focus options. Crash and freeze reports.</li>
         <li><b>v1.1</b>: built-in game player for EmulatorJS sites (full screen, save slots, fast-forward, cached game files, Recent games, Play a ROM file). Games that hung waiting on blocked ads now start: ad and analytics scripts get harmless stand-ins. Auto controller mode. Desktop and TV views now look different (1280 px vs 640 px wide). Button labels no longer get cut off. More video-ad hosts blocked.</li>
         <li><b>v1.0</b>: first release. 16 game sites, remote pointer and D-pad mode, Gamepad API and keyboard controller modes, Focus game, ad, pop-up and redirect blocking, desktop/mobile view per site, installable site apps with sandboxed sign-ins, userscripts with Greasy Fork search, emulator downloads, themes, backup and restore.</li>
       </ul>
